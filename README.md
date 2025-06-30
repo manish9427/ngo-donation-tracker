@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NGO Donation Tracker
 
-## Getting Started
+A lightweight MVP for tracking food donations with a charcoal sketch and glowing lantern aesthetic.
 
-First, run the development server:
+## Setup
+1. Install dependencies: `npm install`
+2. Set up MongoDB Atlas:
+   - Create a cluster and get the connection URI.
+   - Add the URI to `.env.local` as `MONGODB_URI`.
+3. Add a lantern image to `public/lantern.png` (optional).
+4. Run the app: `npm run dev`
+5. Access at `http://localhost:3000`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Add new donations (donor name, food type, quantity)
+- View and search donations
+- Filter by status
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+Deployed on Vercel: [Link to be added]
+Git Repository: [Link to be added]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+# NGO Donation Tracker MVP Write-Up
 
-To learn more about Next.js, take a look at the following resources:
+## User Problem Solved
+The focus is **tracking donations**, providing an efficient system to record and monitor food donations for NGOs. The updated design incorporates a charcoal sketch aesthetic with glowing lanterns to create a warm, inviting interface, addressing previous UI/UX feedback.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Rationale
+- **Functionality**: Users can add, view, search, and filter donations by status, with validated inputs.
+- **Tech Stack**: Next.js with TypeScript for type safety, MongoDB Atlas for persistence.
+- **UX**: Improved with a sketch-like texture, animated lanterns, and better spacing. Validation prevents invalid data.
+- **Visuals**: Charcoal sketch effect via textured background and borders, with glowing lanterns as decorative animations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Coding, Performance, and UX Decisions
+- **Coding**: API routes support filtering; CSS handles the sketch and lantern effects.
+- **Performance**: MongoDB queries are optimized; lantern animations use minimal resources.
+- **UX**: Clean table layout, validated form, and decorative lanterns enhance engagement.
+- **Trade-offs**:
+  - No edit/delete to focus on core features.
+  - Basic validation (required fields, quantity > 0).
+  - Lanterns are decorative, not interactive.
 
-## Deploy on Vercel
+## Scalability for 1,000 NGOs
+- **Database**: MongoDB Atlas with sharding and tenant IDs.
+- **Backend**: Add authentication, caching, and rate limiting.
+- **Performance**: Pagination, edge functions.
+- **Deployment**: Vercel or AWS with CDN.
+- **Features**: Edit/delete, advanced filters, reports.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Shortcuts and Trade-offs
+- No edit/delete or advanced validation.
+- Lanterns are static animations, not functional.
+- Minimal accessibility enhancements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Submission
+- **Prototype**: Vercel URL to be provided.
+- **Git Repository**: GitHub link to be provided.
+- **Access**: Via Vercel URL, with setup in README.
